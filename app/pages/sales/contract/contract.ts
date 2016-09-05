@@ -1,6 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import {NavController, Slides} from 'ionic-angular';
 
+import {ContractListPage} from '../contract-list/contract-list';
+
 /*
   Generated class for the ContractPage page.
 
@@ -35,6 +37,11 @@ export class ContractPage {
 
   gotoSlider(i: number){
     this.slider.slideTo(i, 300);
+  }
+
+  gotoMore()
+  {
+    this.navCtrl.push(ContractListPage,{});
   }
 
 }
