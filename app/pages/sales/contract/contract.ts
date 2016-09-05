@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import {NavController, Slides} from 'ionic-angular';
 
 /*
   Generated class for the ContractPage page.
@@ -12,8 +12,14 @@ import { NavController } from 'ionic-angular';
 })
 export class ContractPage {
 
+  @ViewChild("myClider") slider: Slides;
+
   constructor(private navCtrl: NavController) {
 
+  }
+
+  gotoSlider(i: number){
+    this.slider.slideTo(i, 300);
   }
 
 }
