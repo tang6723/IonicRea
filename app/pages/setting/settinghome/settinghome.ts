@@ -8,7 +8,7 @@ import { NavController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/settinghome/settinghome.html',
+  templateUrl: 'build/pages/setting/settinghome/settinghome.html',
 })
 export class SettinghomePage {
 
