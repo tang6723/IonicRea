@@ -8,6 +8,20 @@
 // App Shared Sass variables belong in app.variables.scss.
 
 @import "../pages/home/home";
+//销售
 @import "../pages/sales/contract/contract";
-
+@import "../pages/sales/contract-item/contract-item";
+@import "../pages/sales/contract-list/contract-list";
+//采购
 @import "../pages/purchase/order/order";
+@import "../pages/purchase/order-item/order-item";
+@import "../pages/purchase/order-list/order-list";
+//财务
+@import "../pages/finance/bills/bills";
+@import "../pages/finance/bills-item/bills-item";
+@import "../pages/finance/bills-list/bills-list";
+
+//设置，商品
+@import "../pages/setting/goods/goods";
+@import "../pages/setting/goods-item/goods-item";
+@import "../pages/setting/goods-list/goods-list";
