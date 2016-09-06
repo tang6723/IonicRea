@@ -126,8 +126,14 @@
     </ion-item>
 
     <ion-item-divider primary>商品列表</ion-item-divider>
-    <ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{item.name}}
+    <ion-item *ngFor="let item of items" (click)="itemSelected(items)">
+      <ion-icon  name={{item.imgurl}} item-left></ion-icon>
+      <h2>{{item.name}}</h2>
+      <h3>{{item.specification}}</h3>
+      <p>
+        <ion-badge item-right>{{item.num}}</ion-badge>  单价：￥{{item.price}}
+      </p>
+      <span item-right primary>小计：￥{{item.num*item.price}}</span>
     </ion-item>
 
     <ion-item-divider>
