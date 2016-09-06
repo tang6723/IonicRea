@@ -6,13 +6,38 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>销售列表</ion-title>
+  <ion-navbar primary>
+    <ion-title style="text-align: center">销售列表</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-divider primary>{{billTime1}} </ion-item-divider>
+    <ion-item *ngFor="let item of items1" (click)="itemSelected(items)">
+      <ion-icon  name={{item.imgurl}} item-left></ion-icon>
+      <h2>{{item.customer}}</h2>
+      <h3>{{item.billno}}</h3>
+      <p>
+        <ion-badge item-right>{{item.dateissue}}</ion-badge>  总价：￥{{item.total}}
+      </p>
+      <span item-right primary>{{item.billstate}}</span>
+    </ion-item>
+
+    <ion-item-divider primary>{{billTime2}} </ion-item-divider>
+    <ion-item *ngFor="let item of items2" (click)="itemSelected(items)">
+      <ion-icon  name={{item.imgurl}} item-left></ion-icon>
+      <h2>{{item.customer}}</h2>
+      <h3>{{item.billno}}</h3>
+      <p>
+        <ion-badge item-right>{{item.dateissue}}</ion-badge>  总价：￥{{item.total}}
+      </p>
+      <span item-right primary>{{item.billstate}}</span>
+    </ion-item>
+
+
+  </ion-list>
 
 </ion-content>
