@@ -19,6 +19,7 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+
   <ion-grid>
     <ion-slides #myClider>
       <ion-slide>
@@ -106,15 +107,48 @@
       </ion-slide>
     </ion-slides>
   </ion-grid>
+
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-divider primary>{{billstate}}
+      <h2 item-right>合计：￥{{billtotal}}元</h2>
+    </ion-item-divider>
+    <ion-item>
+      <ion-icon name="ios-contacts" primary item-left></ion-icon>
+      <h2>{{customer}}</h2>
+      <P>{{customeraddress}}</P>
+      <ion-note item-right>
+        {{telephone}}
+      </ion-note>
+    </ion-item>
+
+    <ion-item-divider primary>商品列表</ion-item-divider>
+    <ion-item *ngFor="let item of items" (click)="itemSelected(items)">
+      <ion-icon  name={{item.imgurl}} item-left></ion-icon>
+      <h2>{{item.name}}</h2>
+      <h3>{{item.specification}}</h3>
+      <p>
+        <ion-badge item-right>{{item.num}}</ion-badge>  单价：￥{{item.price}}
+      </p>
+      <span item-right primary>小计：￥{{item.num*item.price}}</span>
+    </ion-item>
+
+    <ion-item-divider>
+      <P item-right>运费：￥<span danger>{{freight}}</span>元</P>
+    </ion-item-divider>
+    <ion-item-divider>
+      <h2 item-right>合计：￥<span danger>{{billtotal}}</span>元</h2>
+    </ion-item-divider>
+  </ion-list>
 
 </ion-content>
+
 <ion-footer>
   <ion-buttons end>
-    <button royal>
+    <button small>
       <ion-icon name="ios-checkbox-outline">
         保存
       </ion-icon>

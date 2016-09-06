@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Page, NavController } from 'ionic-angular';
 
 /*
   Generated class for the OrderPage page.
@@ -14,6 +14,10 @@ export class OrderPage {
 
   constructor(private navCtrl: NavController) {
 
+
+  }
+  backToPage(){
+    this.navCtrl.pop();
   }
 
 }
