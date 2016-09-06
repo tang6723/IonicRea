@@ -107,12 +107,29 @@
       </ion-slide>
     </ion-slides>
   </ion-grid>
+
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-divider primary>{{billstate}}
+      <h2 item-right>合计：￥{{billtotal}}</h2>
+    </ion-item-divider>
+    <ion-item>
+      <ion-icon name="ios-contacts" primary item-left></ion-icon>
+      <h2>{{customer}}</h2>
+      <P>{{customeraddress}}</P>
+    </ion-item>
+
+    <ion-item-divider primary>商品列表</ion-item-divider>
+    <ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{item.name}}
+    </ion-item>
+  </ion-list>
 
 </ion-content>
+
 <ion-footer>
   <ion-buttons end>
     <button royal>
