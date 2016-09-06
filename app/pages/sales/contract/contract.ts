@@ -59,7 +59,7 @@ export class ContractPage {
 
   showCustomerRadio() {
     let alert = this.alertCtrl.create();
-    alert.setTitle('员工列表');
+    alert.setTitle('客户');
     for(var i=0;i<this.customerList.length;i++){
       alert.addInput({
         type:'radio',
