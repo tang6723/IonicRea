@@ -19,9 +19,11 @@ export class ContractPage {
   billid:string="#201609040008";
   billstate:string="草案";
   billtotal:string ="30，380.00";
+  freight:string ="0.00";
   dateissue:string ="2016年9月3日";
   customer:string ="鞍山汽贸";
-  customeraddress:string ="鞍山铁东湖南34号";
+  telephone:string ="13599915899";
+  customeraddress:string ="辽宁省鞍山市铁东区湖南街34号";
 
   private items: any = [
     {imgurl: 'img/fuwa.jpg',id: '123456', name: '商品1', price: 200.00, num: 3, remark: '这是商品1的简介占位'},

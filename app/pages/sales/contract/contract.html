@@ -120,19 +120,29 @@
       <ion-icon name="ios-contacts" primary item-left></ion-icon>
       <h2>{{customer}}</h2>
       <P>{{customeraddress}}</P>
+      <ion-note item-right>
+        {{telephone}}
+      </ion-note>
     </ion-item>
 
     <ion-item-divider primary>商品列表</ion-item-divider>
     <ion-item *ngFor="let item of items" (click)="itemSelected(item)">
       {{item.name}}
     </ion-item>
+
+    <ion-item-divider>
+      <P item-right>运费：￥<span danger>{{freight}}</span>元</P>
+    </ion-item-divider>
+    <ion-item-divider>
+      <h2 item-right>合计：￥<span danger>{{billtotal}}</span>元</h2>
+    </ion-item-divider>
   </ion-list>
 
 </ion-content>
 
 <ion-footer>
   <ion-buttons end>
-    <button royal>
+    <button small>
       <ion-icon name="ios-checkbox-outline">
         保存
       </ion-icon>
