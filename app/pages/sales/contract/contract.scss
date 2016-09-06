@@ -1,4 +1,8 @@
 .contract-page {
+  ion-row {
+    height: 100%;
+    flex-wrap: wrap;
+  }
   ion-col div {
     //background-color: #F9FAFB;
     //border: 1px solid #ddd;
