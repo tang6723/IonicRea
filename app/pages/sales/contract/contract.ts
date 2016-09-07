@@ -101,4 +101,63 @@ export class ContractPage {
     alert.present();
   }
 
+  EditGoods(item: any){
+    let alert = this.alertCtrl.create({
+      title: '修改数量',
+      inputs:[
+        {
+          name: 'number',
+          placeholder: '商品数量',
+          value: item.num
+        }
+      ],
+      buttons:[
+        {
+          text: '取消Cancel',
+          role: 'cancel',
+          handler: data => {
+            //console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: data => {
+            item.num = data.number;
+            //console.log(data);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  DeleteGoods(item: any){
+    let alert = this.alertCtrl.create({
+      title: '您确定要删除这条商品吗？',
+      buttons: [
+        {
+          text: '不删除',
+          role: 'cancel',
+          handler: () => {
+            //console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '删除',
+          handler: data => {
+            //this.items.remove(d=>d.id  = data.id);
+            for(var i=0;i<this.items.length;i++)
+            {
+              if(this.items[i].id == item.id) {
+                this.items = this.items.slice(0,i).concat(this.items.slice(i+1,this.items.length));
+              }
+            }
+            console.log(this.items);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
 }
