@@ -15,42 +15,27 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-divider primary>{{billTime1}} </ion-item-divider>
-    <ion-item *ngFor="let item of items1" (click)="itemSelected(items1)">
-      <ion-icon  name={{item.imgurl}} item-left></ion-icon>
-      <h2>{{item.customer}}</h2>
-      <h3>{{item.billno}}</h3>
+    <ion-item *ngFor="let item of items" >
+      <ion-icon name={{item.imgurl}} item-left></ion-icon>
+      <h2>{{item.name}}</h2>
+      <h3>{{item.specification}}</h3>
       <p>
-        <ion-badge item-right>{{item.dateissue}}</ion-badge>  总价：￥{{item.total}}
+        <ion-badge item-right>{{item.num}}</ion-badge>
+        单价：￥{{item.price}}
       </p>
-      <span item-right primary>{{item.billstate}}</span>
-    </ion-item>
-
-    <ion-item-divider primary>{{billTime2}} </ion-item-divider>
-    <ion-item *ngFor="let item of items2" (click)="itemSelected(items2)">
-      <ion-row>
-        <ion-col width-67>
-          <h2>{{item.customer}}</h2>
-        </ion-col>
-        <ion-col width-33>
-          总价：￥{{item.total}}
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col>
-          <ion-note>{{item.billno}}</ion-note>
-        </ion-col>
-        <ion-col center text-center>
-          <ion-note>{{item.dateissue}}</ion-note>
-        </ion-col>
-        <ion-col center text-right>
-          <span item-right primary>{{item.billstate}}</span>
-        </ion-col>
-      </ion-row>
     </ion-item>
 
 
   </ion-list>
 
 </ion-content>
+
+<ion-footer>
+  <ion-buttons end>
+    <button small (click)="popContract()">
+      <ion-icon name="ios-checkbox-outline">
+        完成
+      </ion-icon>
+    </button>
+  </ion-buttons>
+</ion-footer>

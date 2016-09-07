@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import {NavController, Slides, AlertController} from 'ionic-angular';
+import {NavController, Slides, AlertController, NavParams} from 'ionic-angular';
 
 import {ContractListPage} from '../contract-list/contract-list';
 import {ContractItemPage} from '../contract-item/contract-item';
@@ -46,7 +46,7 @@ export class ContractPage {
       {"id": "010104", "name": "客户6", "telephone": '0A07868678678A', "deptname": "联系人6", "sex": "ios-man", "customeraddress": "客户6地址"}
     ];
   }
-  constructor(private navCtrl: NavController, private alertCtrl: AlertController) {
+  constructor(private navCtrl: NavController, private alertCtrl: AlertController, private  navParams: NavParams) {
     this.initializeEmployeeList();
   }
 
@@ -74,7 +74,7 @@ export class ContractPage {
   }
 
   pushGoodsItem(){
-    this.navCtrl.push(ContractGoodsListPage, {});
+    this.navCtrl.push(ContractGoodsListPage, {'temlist': this.items});
   }
 
   showCustomerRadio() {
