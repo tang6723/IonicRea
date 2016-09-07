@@ -1,14 +1,25 @@
 .contract-goodslist {
-  ion-col {
-    padding: 0;
+  ion-row {
+    //height: 100%;
+    //flex-wrap: wrap;
   }
-  ion-col h2 {
-    font-size:2.0rem;
+  ion-col div {
+    //background-color: #F9FAFB;
+    //border: 1px solid #ddd;
+    padding: 3px;
+    border-radius: 2px;
+    text-align: center;
+    height:120px;
   }
+
   ion-item h2 {
     font-size:2.0rem;
   }
-  ion-item h3 {
-    font-size:1.8rem;
+  .slide-zoom {
+    height: 100%;
+  }
+
+  .fab-tang {
+    position: relative;
   }
 }
