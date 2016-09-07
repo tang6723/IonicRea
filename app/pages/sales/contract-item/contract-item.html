@@ -17,17 +17,30 @@
 
   <ion-list>
     <ion-item>
-      <h2>ID:{{firstParam}}</h2>
-      <p>type:{{secondParam}}</p>
-      <button small (click)="doFocus()">
-        <ion-icon name="ios-checkbox-outline">
-          保存
-        </ion-icon>
-      </button>
+      <ion-row>
+        <ion-col width-67>
+          <h2>{{customer}}</h2>
+        </ion-col>
+        <ion-col width-33>
+          ￥{{billtotal}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-note>{{billid}}</ion-note>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>{{dateissue}}</ion-note>
+        </ion-col>
+        <ion-col center text-right>
+          <span item-right primary>{{billstate}}</span>
+        </ion-col>
+      </ion-row>
     </ion-item>
 
     <ion-item>
-      <ion-label  floating>收款情况</ion-label>
+      <ion-label  floating>{{secondParam}}情况</ion-label>
       <ion-textarea id="text2" rows="2"></ion-textarea>
     </ion-item>
 
@@ -108,12 +121,12 @@
             <ion-icon primary name="md-checkbox-outline"></ion-icon>
           </div>
           <div class="timeline-item">
-            <h4>已审批2</h4>
-            <p>说明占位</p>
+            <h4>出库</h4>
+            <p>说明占位，说明占位，说明占位，说明占位</p>
             <div class="timeline-stats">
               <ion-icon name="heart"></ion-icon>
-              审批人：王五
-              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 审批时间：2016/01/01</span>
+              出库：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 2016/01/01</span>
             </div>
           </div>
         </li>
@@ -123,12 +136,28 @@
             <ion-icon primary name="md-checkbox-outline"></ion-icon>
           </div>
           <div class="timeline-item">
-            <h4>订单已生成</h4>
+            <h4>运输</h4>
             <p>说明占位</p>
             <div class="timeline-stats">
               <ion-icon name="heart"></ion-icon>
-              申请人：王五
-              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 申请时间：2016/01/01</span>
+              运输：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 2016/01/01</span>
+            </div>
+          </div>
+        </li>
+
+        <li>
+          <!--<img src="http://lorempixel.com/people/400/400/" alt="" class="timeline-thumb">-->
+          <div class="timeline-thumb bg-color-white timeline-icon">
+            <ion-icon primary name="md-checkbox-outline"></ion-icon>
+          </div>
+          <div class="timeline-item">
+            <h4>安装</h4>
+            <p>说明占位</p>
+            <div class="timeline-stats">
+              <ion-icon name="heart"></ion-icon>
+              安装：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 2016/01/01</span>
             </div>
           </div>
         </li>
