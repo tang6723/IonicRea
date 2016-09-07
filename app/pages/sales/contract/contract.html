@@ -9,12 +9,12 @@
   <ion-navbar primary>
     <ion-title style="text-align: center">销售合同</ion-title>
     <ion-buttons end>
-      <button royal (click)="gotoHome()">
+      <button royal (click)="popHome()">
         <ion-icon name="ios-home"></ion-icon>
       </button>
     </ion-buttons>
     <ion-buttons end>
-      <button royal (click)="gotoMore()">
+      <button royal (click)="pushMore()">
         <ion-icon name="ios-more"></ion-icon>
       </button>
     </ion-buttons>
@@ -42,7 +42,7 @@
           </ion-col>
           <ion-col  >
             <div>
-              <button fab style="position:relative" (click)="gotoItem()">
+              <button fab style="position:relative" (click)="pushItem()">
                 <ion-icon name="md-checkmark"></ion-icon>
               </button>
               <h5>审批</h5>

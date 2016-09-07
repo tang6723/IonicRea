@@ -53,17 +53,17 @@ export class ContractPage {
     this.slider.slideTo(i, 300);
   }
 
-  gotoHome(){
+  popHome(){
     this.navCtrl.popToRoot();
   }
 
-  gotoMore()
+  pushMore()
   {
     this.navCtrl.push(ContractListPage,{});
   }
 
 
-  gotoItem()
+  pushItem()
   {
     this.navCtrl.push(ContractItemPage,{
       id:"123",
