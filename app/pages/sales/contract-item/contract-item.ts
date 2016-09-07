@@ -24,12 +24,25 @@ export class ContractItemPage {
 
   public firstParam:any;
   public secondParam:any;
+  processList; any;
 
   constructor(private navCtrl: NavController,private  navParams: NavParams) {
     this.firstParam=navParams.get('id');
     this.secondParam=navParams.get('type');
 
+    this.processList = [
+      {"id": "010101", "title": "审批", "telephone": '12345678', "deptname": "联系人1", "sex": "ios-woman", "address": "客户1地址"},
+      {"id": "010102", "title": "收款", "telephone": '12345678', "deptname": "联系人2", "sex": "ios-man",   "address": "客户2地址"},
+      {"id": "010103", "title": "发票", "telephone": '12345678', "deptname": "联系人3", "sex": "ios-man",   "address": "客户3地址"},
+      {"id": "010111", "title": "出库", "telephone": '12345678', "deptname": "联系人4", "sex": "ios-woman", "address": "客户4地址"},
+      {"id": "010121", "title": "运输", "telephone": '12345678', "deptname": "联系人5", "sex": "ios-man",   "address": "客户5地址"},
+      {"id": "010104", "title": "安装", "telephone": '12345678', "deptname": "联系人6", "sex": "ios-man",   "address": "客户6地址"}
+    ];
+    //
+  }
 
+  doFocus() {
+    document.getElementById('text2').focus();
   }
 
 }

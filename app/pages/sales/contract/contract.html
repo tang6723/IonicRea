@@ -34,7 +34,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushGoodsItem()">
                 <ion-icon name="ios-cart"></ion-icon>
               </button>
               <h5>商品</h5>
@@ -42,7 +42,7 @@
           </ion-col>
           <ion-col  >
             <div>
-              <button fab style="position:relative" (click)="pushItem()">
+              <button fab style="position:relative" (click)="pushItem(1)">
                 <ion-icon name="md-checkmark"></ion-icon>
               </button>
               <h5>审批</h5>
@@ -51,14 +51,14 @@
 
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(2)">
                 <ion-icon name="logo-yen"></ion-icon>
               </button>
               <h5>收款</h5>
             </div>
           </ion-col>
         <ion-col center width-10>
-          <button style="position:relative" clear (click)="gotoSlider(1)">
+          <button style="position:relative" clear (click)="gotoSlider(2)">
             <ion-icon name="ios-arrow-forward"></ion-icon>
           </button>
         </ion-col>
@@ -73,7 +73,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(3)">
                 <ion-icon name="ios-card"></ion-icon>
               </button>
               <h5>发票</h5>
@@ -81,7 +81,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(4)">
                 <ion-icon name="ios-clipboard-outline"></ion-icon>
               </button>
               <h5>出库</h5>
@@ -89,7 +89,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(5)">
                 <ion-icon name="ios-car"></ion-icon>
               </button>
               <h5>运输</h5>
@@ -97,7 +97,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(6)">
                 <ion-icon name="ios-build-outline"></ion-icon>
               </button>
               <h5>安装</h5>
@@ -126,7 +126,8 @@
     </ion-item>
 
     <ion-item-divider primary>商品列表</ion-item-divider>
-    <ion-item *ngFor="let item of items" (click)="itemSelected(items)">
+    <ion-item-sliding *ngFor="let item of items">
+    <ion-item (click)="itemSelected(items)">
       <ion-icon  name={{item.imgurl}} item-left></ion-icon>
       <h2>{{item.name}}</h2>
       <h3>{{item.specification}}</h3>
@@ -135,6 +136,11 @@
       </p>
       <span item-right primary>小计：￥{{item.num*item.price}}</span>
     </ion-item>
+      <ion-item-options side="right">
+        <button (click)="EditGoods(item)">编辑</button>
+        <button danger (click)="DeleteGoods(item)">删除</button>
+      </ion-item-options>
+    </ion-item-sliding>
 
     <ion-item-divider>
       <P item-right>运费：￥<span danger>{{freight}}</span>元</P>
@@ -148,7 +154,7 @@
 
 <ion-footer>
   <ion-buttons end>
-    <button small>
+    <button small (click)="pushMore">
       <ion-icon name="ios-checkbox-outline">
         保存
       </ion-icon>

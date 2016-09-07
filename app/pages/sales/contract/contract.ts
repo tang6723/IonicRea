@@ -1,8 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import {NavController, Slides, AlertController} from 'ionic-angular';
+import {NavController, Slides, AlertController, NavParams} from 'ionic-angular';
 
 import {ContractListPage} from '../contract-list/contract-list';
 import {ContractItemPage} from '../contract-item/contract-item';
+import {ContractGoodsListPage} from '../contract-goodslist/contract-goodslist';
 
 /*
   Generated class for the ContractPage page.
@@ -26,6 +27,7 @@ export class ContractPage {
   telephone:string ="13599915899";
   customeraddress:string ="辽宁省鞍山市铁东区湖南街34号";
   customerList; any;
+  typeTmp: string;
 
   private items: any = [
     {imgurl: 'ios-flag-outline',id: '123456', name: '商品1', price: 200.00, num: 3, specification: '规格33MM'},
@@ -45,7 +47,7 @@ export class ContractPage {
       {"id": "010104", "name": "客户6", "telephone": '0A07868678678A', "deptname": "联系人6", "sex": "ios-man", "customeraddress": "客户6地址"}
     ];
   }
-  constructor(private navCtrl: NavController, private alertCtrl: AlertController) {
+  constructor(private navCtrl: NavController, private alertCtrl: AlertController, private  navParams: NavParams) {
     this.initializeEmployeeList();
   }
 
@@ -63,13 +65,39 @@ export class ContractPage {
   }
 
 
-  pushItem()
+  pushItem(index: number)
   {
+
+    switch (index) {
+      case 1:
+        this.typeTmp = '审批';
+            break;
+      case 2:
+        this.typeTmp = '收款';
+        break;
+      case 3:
+        this.typeTmp = '发票';
+        break;
+      case 4:
+        this.typeTmp = '出库';
+        break;
+      case 5:
+        this.typeTmp = '运输';
+        break;
+      case 6:
+        this.typeTmp = '安装';
+        break;
+    }
+
     this.navCtrl.push(ContractItemPage,{
       id:"123",
-      type:"审核"
+      type:this.typeTmp
 
     });
+  }
+
+  pushGoodsItem(){
+    this.navCtrl.push(ContractGoodsListPage, {'temlist': this.items});
   }
 
   showCustomerRadio() {
@@ -97,6 +125,65 @@ export class ContractPage {
 
           console.log(data);
       }
+    });
+    alert.present();
+  }
+
+  EditGoods(item: any){
+    let alert = this.alertCtrl.create({
+      title: '修改数量',
+      inputs:[
+        {
+          name: 'number',
+          placeholder: '商品数量',
+          value: item.num
+        }
+      ],
+      buttons:[
+        {
+          text: '取消',
+          role: 'cancel',
+          handler: data => {
+            //console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '确定',
+          handler: data => {
+            item.num = data.number;
+            //console.log(data);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+  DeleteGoods(item: any){
+    let alert = this.alertCtrl.create({
+      title: '您确定要删除这条商品吗？',
+      buttons: [
+        {
+          text: '不删除',
+          role: 'cancel',
+          handler: () => {
+            //console.log('Cancel clicked');
+          }
+        },
+        {
+          text: '删除',
+          handler: data => {
+            //this.items.remove(d=>d.id  = data.id);
+            for(var i=0;i<this.items.length;i++)
+            {
+              if(this.items[i].id == item.id) {
+                this.items = this.items.slice(0,i).concat(this.items.slice(i+1,this.items.length));
+              }
+            }
+            console.log(this.items);
+          }
+        }
+      ]
     });
     alert.present();
   }
