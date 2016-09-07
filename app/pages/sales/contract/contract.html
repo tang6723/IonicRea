@@ -42,7 +42,7 @@
           </ion-col>
           <ion-col  >
             <div>
-              <button fab style="position:relative" (click)="pushItem()">
+              <button fab style="position:relative" (click)="pushItem(1)">
                 <ion-icon name="md-checkmark"></ion-icon>
               </button>
               <h5>审批</h5>
@@ -51,14 +51,14 @@
 
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(2)">
                 <ion-icon name="logo-yen"></ion-icon>
               </button>
               <h5>收款</h5>
             </div>
           </ion-col>
         <ion-col center width-10>
-          <button style="position:relative" clear (click)="gotoSlider(1)">
+          <button style="position:relative" clear (click)="gotoSlider(2)">
             <ion-icon name="ios-arrow-forward"></ion-icon>
           </button>
         </ion-col>
@@ -73,7 +73,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(3)">
                 <ion-icon name="ios-card"></ion-icon>
               </button>
               <h5>发票</h5>
@@ -81,7 +81,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(4)">
                 <ion-icon name="ios-clipboard-outline"></ion-icon>
               </button>
               <h5>出库</h5>
@@ -89,7 +89,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(5)">
                 <ion-icon name="ios-car"></ion-icon>
               </button>
               <h5>运输</h5>
@@ -97,7 +97,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushItem(6)">
                 <ion-icon name="ios-build-outline"></ion-icon>
               </button>
               <h5>安装</h5>

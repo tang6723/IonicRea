@@ -27,6 +27,7 @@ export class ContractPage {
   telephone:string ="13599915899";
   customeraddress:string ="辽宁省鞍山市铁东区湖南街34号";
   customerList; any;
+  typeTmp: string;
 
   private items: any = [
     {imgurl: 'ios-flag-outline',id: '123456', name: '商品1', price: 200.00, num: 3, specification: '规格33MM'},
@@ -64,11 +65,33 @@ export class ContractPage {
   }
 
 
-  pushItem()
+  pushItem(index: number)
   {
+
+    switch (index) {
+      case 1:
+        this.typeTmp = '审批';
+            break;
+      case 2:
+        this.typeTmp = '收款';
+        break;
+      case 3:
+        this.typeTmp = '发票';
+        break;
+      case 4:
+        this.typeTmp = '出库';
+        break;
+      case 5:
+        this.typeTmp = '运输';
+        break;
+      case 6:
+        this.typeTmp = '安装';
+        break;
+    }
+
     this.navCtrl.push(ContractItemPage,{
       id:"123",
-      type:"审核"
+      type:this.typeTmp
 
     });
   }
