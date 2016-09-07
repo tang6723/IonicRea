@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import {NavController, Slides, AlertController} from 'ionic-angular';
 
 import {ContractListPage} from '../contract-list/contract-list';
+import {ContractItemPage} from '../contract-item/contract-item';
 
 /*
   Generated class for the ContractPage page.
@@ -59,6 +60,16 @@ export class ContractPage {
   gotoMore()
   {
     this.navCtrl.push(ContractListPage,{});
+  }
+
+
+  gotoItem()
+  {
+    this.navCtrl.push(ContractItemPage,{
+      id:"123",
+      type:"审核"
+
+    });
   }
 
   showCustomerRadio() {
