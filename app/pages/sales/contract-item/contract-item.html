@@ -43,4 +43,87 @@
 
   </ion-list>
 
+  <ion-card>
+    <ion-card-content>
+      <ion-refresher on-refresh="doRefresh()" pulling-icon="ion-load-d" spinner="ios-small"></ion-refresher>
+
+      <div class="divider-title">流程列表</div>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-thumb bg-color-red timeline-icon">
+            <ion-icon name="md-arrow-dropdown-circle"></ion-icon>
+          </div>
+          <div class="timeline-item">
+            <h4>客户已收货</h4>
+            <p>说明占位</p>
+            <div class="timeline-stats">
+              <ion-icon name="heart"></ion-icon>
+              签收人：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 签收时间：2016/01/01</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!--<img src="http://lorempixel.com/people/400/400/" alt="" class="timeline-thumb">-->
+          <div class="timeline-thumb bg-color-blue timeline-icon">
+            <ion-icon secondary name="md-checkbox"></ion-icon>
+          </div>
+          <div class="timeline-item">
+            <h4>已发货</h4>
+            <p>说明占位</p>
+            <div class="timeline-stats">
+              <ion-icon name="heart"></ion-icon>
+              发货单号：1234567890
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 发货时间：2016/01/01</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-thumb bg-color-blue timeline-icon">
+            <ion-icon secondary name="md-checkbox"></ion-icon>
+          </div>
+          <div class="timeline-item">
+            <h4>已审批</h4>
+            <p>说明占位</p>
+            <div class="timeline-stats">
+              <ion-icon name="heart"></ion-icon>
+              审批人：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 审批时间：2016/01/01</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-thumb bg-color-blue timeline-icon">
+            <ion-icon secondary name="md-checkbox"></ion-icon>
+          </div>
+          <div class="timeline-item">
+            <h4>已审批2</h4>
+            <p>说明占位</p>
+            <div class="timeline-stats">
+              <ion-icon name="heart"></ion-icon>
+              审批人：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 审批时间：2016/01/01</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <!--<img src="http://lorempixel.com/people/400/400/" alt="" class="timeline-thumb">-->
+          <div class="timeline-thumb bg-color-blue timeline-icon">
+            <ion-icon secondary name="md-checkbox"></ion-icon>
+          </div>
+          <div class="timeline-item">
+            <h4>订单已生成</h4>
+            <p>说明占位</p>
+            <div class="timeline-stats">
+              <ion-icon name="heart"></ion-icon>
+              申请人：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 申请时间：2016/01/01</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
