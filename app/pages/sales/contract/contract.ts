@@ -3,6 +3,7 @@ import {NavController, Slides, AlertController} from 'ionic-angular';
 
 import {ContractListPage} from '../contract-list/contract-list';
 import {ContractItemPage} from '../contract-item/contract-item';
+import {ContractGoodsListPage} from '../contract-goodslist/contract-goodslist';
 
 /*
   Generated class for the ContractPage page.
@@ -72,6 +73,10 @@ export class ContractPage {
     });
   }
 
+  pushGoodsItem(){
+    this.navCtrl.push(ContractGoodsListPage, {});
+  }
+
   showCustomerRadio() {
     let alert = this.alertCtrl.create();
     alert.setTitle('客户');
@@ -113,7 +118,7 @@ export class ContractPage {
       ],
       buttons:[
         {
-          text: '取消Cancel',
+          text: '取消',
           role: 'cancel',
           handler: data => {
             //console.log('Cancel clicked');

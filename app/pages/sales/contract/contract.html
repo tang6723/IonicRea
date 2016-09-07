@@ -34,7 +34,7 @@
           </ion-col>
           <ion-col>
             <div>
-              <button fab style="position:relative">
+              <button fab style="position:relative" (click)="pushGoodsItem()">
                 <ion-icon name="ios-cart"></ion-icon>
               </button>
               <h5>商品</h5>
@@ -154,7 +154,7 @@
 
 <ion-footer>
   <ion-buttons end>
-    <button small>
+    <button small (click)="pushMore()">
       <ion-icon name="ios-checkbox-outline">
         保存
       </ion-icon>
