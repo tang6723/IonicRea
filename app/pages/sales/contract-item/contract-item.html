@@ -19,17 +19,25 @@
     <ion-item>
       <h2>ID:{{firstParam}}</h2>
       <p>type:{{secondParam}}</p>
+      <button small (click)="doFocus()">
+        <ion-icon name="ios-checkbox-outline">
+          保存
+        </ion-icon>
+      </button>
+    </ion-item>
 
-
+    <ion-item>
+      <ion-label  floating>收款情况</ion-label>
+      <ion-textarea id="text2" rows="2"></ion-textarea>
     </ion-item>
 
     <ion-item>
       <ion-row>
         <ion-col center text-center>
-            <button  >
-              <ion-icon name="ios-close-circle-outline"></ion-icon>
-              驳回
-            </button>
+          <button>
+            <ion-icon name="ios-close-circle-outline"></ion-icon>
+            驳回
+          </button>
         </ion-col>
         <ion-col center text-center>
           <button>
@@ -54,47 +62,50 @@
             <ion-icon name="md-arrow-dropdown-circle"></ion-icon>
           </div>
           <div class="timeline-item">
-            <h4>客户已收货</h4>
-            <p>说明占位</p>
+            <h4>审批</h4>
+            <ion-item>
+              <ion-label  floating>审批情况</ion-label>
+              <ion-textarea id="text1" rows="2"></ion-textarea>
+            </ion-item>
             <div class="timeline-stats">
               <ion-icon name="heart"></ion-icon>
-              签收人：王五
-              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 签收时间：2016/01/01</span>
+              审批：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 2016/09/01</span>
             </div>
           </div>
         </li>
         <li>
           <!--<img src="http://lorempixel.com/people/400/400/" alt="" class="timeline-thumb">-->
-          <div class="timeline-thumb bg-color-blue timeline-icon">
-            <ion-icon secondary name="md-checkbox"></ion-icon>
+          <div class="timeline-thumb bg-color-white timeline-icon">
+            <ion-icon primary name="md-checkbox-outline"></ion-icon>
           </div>
           <div class="timeline-item">
-            <h4>已发货</h4>
+            <h4>收款</h4>
             <p>说明占位</p>
             <div class="timeline-stats">
               <ion-icon name="heart"></ion-icon>
-              发货单号：1234567890
-              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 发货时间：2016/01/01</span>
+              收款：小赵
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 2016/09/02</span>
             </div>
           </div>
         </li>
         <li>
-          <div class="timeline-thumb bg-color-blue timeline-icon">
-            <ion-icon secondary name="md-checkbox"></ion-icon>
+          <div class="timeline-thumb bg-color-white timeline-icon">
+            <ion-icon primary name="md-checkbox-outline"></ion-icon>
           </div>
           <div class="timeline-item">
-            <h4>已审批</h4>
+            <h4>发票</h4>
             <p>说明占位</p>
             <div class="timeline-stats">
               <ion-icon name="heart"></ion-icon>
-              审批人：王五
-              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 审批时间：2016/01/01</span>
+              开票：王五
+              <span class="pos-absolute-right"><ion-icon name="time"></ion-icon> 2016/01/01</span>
             </div>
           </div>
         </li>
         <li>
-          <div class="timeline-thumb bg-color-blue timeline-icon">
-            <ion-icon secondary name="md-checkbox"></ion-icon>
+          <div class="timeline-thumb bg-color-white timeline-icon">
+            <ion-icon primary name="md-checkbox-outline"></ion-icon>
           </div>
           <div class="timeline-item">
             <h4>已审批2</h4>
@@ -108,8 +119,8 @@
         </li>
         <li>
           <!--<img src="http://lorempixel.com/people/400/400/" alt="" class="timeline-thumb">-->
-          <div class="timeline-thumb bg-color-blue timeline-icon">
-            <ion-icon secondary name="md-checkbox"></ion-icon>
+          <div class="timeline-thumb bg-color-white timeline-icon">
+            <ion-icon primary name="md-checkbox-outline"></ion-icon>
           </div>
           <div class="timeline-item">
             <h4>订单已生成</h4>
