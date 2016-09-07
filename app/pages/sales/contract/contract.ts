@@ -52,6 +52,10 @@ export class ContractPage {
     this.slider.slideTo(i, 300);
   }
 
+  gotoHome(){
+    this.navCtrl.popToRoot();
+  }
+
   gotoMore()
   {
     this.navCtrl.push(ContractListPage,{});
