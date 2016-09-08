@@ -3,6 +3,7 @@ import { NavController,Slides, AlertController, NavParams } from 'ionic-angular'
 
 import {OrderItemPage} from '../order-item/order-item';
 import {OrderListPage} from '../order-list/order-list';
+import {PurchaseGoodsListPage} from '../purchase-goodslist/purchase-goodslist';
 
 /*
   Generated class for the OrderPage page.
@@ -48,7 +49,7 @@ export class OrderPage {
   }
 
   constructor(private navCtrl: NavController, private alertCtrl: AlertController, private  navParams: NavParams) {
-
+    this.initializeEmployeeList();
 
   }
 
@@ -74,19 +75,16 @@ export class OrderPage {
         this.typeTmp = '审批';
         break;
       case 2:
-        this.typeTmp = '收款';
+        this.typeTmp = '付款';
         break;
       case 3:
         this.typeTmp = '发票';
         break;
       case 4:
-        this.typeTmp = '出库';
+        this.typeTmp = '验收';
         break;
       case 5:
-        this.typeTmp = '运输';
-        break;
-      case 6:
-        this.typeTmp = '安装';
+        this.typeTmp = '入库';
         break;
     }
 
@@ -98,7 +96,7 @@ export class OrderPage {
   }
 
   pushGoodsItem(){
-    //this.navCtrl.push(ContractGoodsListPage, {'temlist': this.items});
+    this.navCtrl.push(PurchaseGoodsListPage, {'temlist': this.items});
   }
 
   showCustomerRadio() {
