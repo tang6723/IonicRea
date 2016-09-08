@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /*
   Generated class for the BillsPage page.
@@ -22,8 +22,8 @@ export class BillsPage {
 
 
 
-  constructor(private navCtrl: NavController) {
-
+  constructor(private navCtrl: NavController, private navPara: NavParams) {
+    this.billid = this.navPara.get("item").id;
   }
 
 }
