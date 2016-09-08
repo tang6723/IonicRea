@@ -41,7 +41,7 @@
 
       <ion-col>
         <div>
-          <button fab style="position:relative" [navPush]="billsPage">
+          <button fab style="position:relative" [navPush]="billsListPage">
             <ion-icon name="logo-bitcoin"></ion-icon>
           </button>
           <h5>收款付款</h5>
@@ -69,17 +69,33 @@
       </ion-col>
     </ion-row>
 
-
-
   </ion-grid>
+
   <ion-item>
-    <ion-label>开始时间</ion-label>
-    <ion-label>开始时间</ion-label>
+
   </ion-item>
 
   <ion-item>
-    <ion-label>开始时间</ion-label>
-    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    <ion-icon name="ios-contacts" primary item-left></ion-icon>
+    <h2>{{username}}</h2>
+    <ion-note item-right>
+      {{usertitle}}
+    </ion-note>
+
+  </ion-item>
+
+  <ion-item>
+    <!--<ion-label>开始时间</ion-label>-->
+    <!--<ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>-->
+    <!--<ion-note item-right>时间：{{time|amDateFormat:'DD MMM YYYY HH:mm'}} </ion-note>-->
+    <ion-datetime displayFormat="MMM DD, h:mm A" [(ngModel)]="myDate"
+                  monthNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"
+                  monthShortNames="一,二,三,四,五,六,七,八,九,十,十一,十二"
+                  dayNames="周一,周二,周三,周四,周五,周六,周日"
+                  dayShortNames="一,二,三,四,五,六,日"
+                  cancelText="取消"
+                  doneText="确定"
+    ></ion-datetime>
   </ion-item>
 
 </ion-content>

@@ -33,8 +33,8 @@ export class ContractPage {
     {imgurl: 'ios-flag-outline',id: '123456', name: '商品1', price: 200.00, num: 3, specification: '规格33MM'},
     {imgurl: 'ios-flame-outline',id: '123457', name: '商品2', price: 1120.00, num: 9, specification: '规格66MM'},
     {imgurl: 'ios-flash-outline',id: '123458', name: '商品3', price: 280.00, num: 6, specification: '规格40MM'},
-    {imgurl: 'ios-flash-outline',id: '123459', name: '商品4', price: 2450.23, num: 15, specification: '规格20MM'},
-    {imgurl: 'ios-flash-outline',id: '123460', name: '商品5', price: 900, num: 30, specification: '规格10MM'}
+    {imgurl: 'ios-flash-outline',id: '123459', name: '运费', price: 2450.23, num: 15, specification: '货物运输费'},
+    {imgurl: 'ios-flash-outline',id: '123460', name: '安装费', price: 900, num: 30, specification: '现场安装费'}
   ];
 
   initializeEmployeeList() {
@@ -90,7 +90,7 @@ export class ContractPage {
     }
 
     this.navCtrl.push(ContractItemPage,{
-      id:"123",
+      id:this.billid,
       type:this.typeTmp
 
     });
