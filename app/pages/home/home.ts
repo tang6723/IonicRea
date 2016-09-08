@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import {ContractPage} from '../sales/contract/contract';
 import {OrderPage} from '../purchase/order/order';
 import {GoodsPage} from '../setting/goods/goods';
-import {BillsPage} from '../finance/bills/bills';
+import {BillsListPage} from '../finance/bills-list/bills-list';
 import {ExpensePage} from '../finance/expense/expense';
 import {SettinghomePage} from '../setting/settinghome/settinghome';
 
@@ -17,7 +17,7 @@ export class HomePage {
   contractPage=ContractPage;
   orderPage=OrderPage;
   goodsPage=GoodsPage;
-  billsPage=BillsPage;
+  billsListPage=BillsListPage;
   expensePage=ExpensePage;
   settinghomePage=SettinghomePage;
 
