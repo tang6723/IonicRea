@@ -8,7 +8,7 @@ import { NavController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/order-list/order-list.html',
+  templateUrl: 'build/pages/purchase/order-list/order-list.html',
 })
 export class OrderListPage {
 
