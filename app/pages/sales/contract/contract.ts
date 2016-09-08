@@ -90,7 +90,7 @@ export class ContractPage {
     }
 
     this.navCtrl.push(ContractItemPage,{
-      id:"123",
+      id:this.billid,
       type:this.typeTmp
 
     });
