@@ -21,12 +21,22 @@ export class HomePage {
   expensePage=ExpensePage;
   settinghomePage=SettinghomePage;
 
+  time: Date;
+
+  public username:string="王宝强";
+  public usertitle:string="管理员";
+  public myDate:string;
+
   public event = {
     month: '1990-02-19',
     timeStarts: '07:43',
     timeEnds: '1990-02-20'
   }
   constructor(public navCtrl: NavController) {
+
+    this.time = new Date();
+    this.myDate = new Date().toISOString();
+    setInterval(() => this.myDate = new Date().toISOString(), 1000);
 
   }
 }

@@ -69,17 +69,26 @@
       </ion-col>
     </ion-row>
 
-
-
   </ion-grid>
+
   <ion-item>
-    <ion-label>开始时间</ion-label>
-    <ion-label>开始时间</ion-label>
+
   </ion-item>
 
   <ion-item>
-    <ion-label>开始时间</ion-label>
-    <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    <ion-icon name="ios-contacts" primary item-left></ion-icon>
+    <h2>{{username}}</h2>
+    <ion-note item-right>
+      {{usertitle}}
+    </ion-note>
+
+  </ion-item>
+
+  <ion-item>
+    <!--<ion-label>开始时间</ion-label>-->
+    <!--<ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>-->
+    <!--<ion-note item-right>时间：{{time|amDateFormat:'DD MMM YYYY HH:mm'}} </ion-note>-->
+    <ion-datetime displayFormat="MMM DD, h:mm A" [(ngModel)]="myDate"></ion-datetime>
   </ion-item>
 
 </ion-content>
