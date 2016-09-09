@@ -16,7 +16,7 @@ export class HomePage {
 
   contractPage=ContractPage;
   orderPage=OrderPage;
-  goodsPage=GoodsListPage;
+  goodsListPage=GoodsListPage;
   billsListPage=BillsListPage;
   expensePage=ExpensePage;
   settinghomePage=SettinghomePage;
