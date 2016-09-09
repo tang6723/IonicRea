@@ -16,8 +16,8 @@ export class GoodsPage {
   private goodsID: String;
 
   constructor(private navCtrl: NavController, private  navPara: NavParams) {
-    this.goodsName = this.navPara.get("item").name;
-    this.goodsID = this.navPara.get("item").id;
+    //this.goodsName = this.navPara.get("item").name;
+    //this.goodsID = this.navPara.get("item").id;
   }
 
 }
