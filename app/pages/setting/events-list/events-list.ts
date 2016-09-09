@@ -8,7 +8,7 @@ import { NavController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/events-list/events-list.html',
+  templateUrl: 'build/pages/setting/events-list/events-list.html',
 })
 export class EventsListPage {
 

@@ -8,7 +8,7 @@ import { NavController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/human-list/human-list.html',
+  templateUrl: 'build/pages/setting/human-list/human-list.html',
 })
 export class HumanListPage {
 
