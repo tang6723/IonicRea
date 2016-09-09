@@ -6,13 +6,147 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar primary>
     <ion-title  style="text-align: center">日常报销</ion-title>
+
+    <ion-buttons end>
+      <button royal (click)="popHome()">
+        <ion-icon name="ios-home"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button  (click)="pushMore()">
+        <ion-icon name="ios-more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+  <ion-slides #myClider>
+    <ion-slide>
+      <ion-row wrap>
+        <ion-col>
+          <div>
+            <button fab style="position:relative" (click)="showCustomerRadio()">
+              <ion-icon name="ios-contacts"></ion-icon>
+            </button>
+            <h5>员工</h5>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <button fab style="position:relative" (click)="pushGoodsItem()">
+              <ion-icon name="ios-cart"></ion-icon>
+            </button>
+            <h5>申请</h5>
+          </div>
+        </ion-col>
+        <ion-col  >
+          <div>
+            <button fab style="position:relative" (click)="pushItem(1)">
+              <ion-icon name="md-checkmark"></ion-icon>
+            </button>
+            <h5>审批</h5>
+          </div>
+        </ion-col>
+
+        <ion-col>
+          <div>
+            <button fab style="position:relative" (click)="pushItem(2)">
+              <ion-icon name="logo-yen"></ion-icon>
+            </button>
+            <h5>付款</h5>
+          </div>
+        </ion-col>
+        <ion-col center width-10>
+          <button style="position:relative" clear (click)="gotoSlider(2)">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+    <ion-slide>
+      <ion-row wrap>
+        <ion-col center width-10>
+          <button style="position:relative" clear (click)="gotoSlider(0)">
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+          <div>
+            <button fab style="position:relative" (click)="pushItem(3)">
+              <ion-icon name="ios-card"></ion-icon>
+            </button>
+            <h5>...</h5>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <button fab style="position:relative" (click)="pushItem(4)">
+              <ion-icon name="ios-clipboard-outline"></ion-icon>
+            </button>
+            <h5>...</h5>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <button fab style="position:relative" (click)="pushItem(5)">
+              <ion-icon name="ios-car"></ion-icon>
+            </button>
+            <h5>...</h5>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div>
+            <!--<button fab style="position:relative" (click)="pushItem(6)">
+              <ion-icon name="ios-build-outline"></ion-icon>
+            </button>
+            <h5>...</h5>-->
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item-divider primary>{{billstate}}
+      <h2 item-right>合计：￥{{billtotal}}元</h2>
+    </ion-item-divider>
+    <ion-item>
+      <ion-icon name="ios-contacts" primary item-left></ion-icon>
+      <h2>{{customer}}</h2>
+      <P>{{customeraddress}}</P>
+      <ion-note item-right>
+        {{dateissue}}
+      </ion-note>
+    </ion-item>
+
+    <ion-item-divider primary>费用列表</ion-item-divider>
+    <ion-item>
+      <ion-label>费用分类</ion-label>
+      <ion-select okText="确定" cancelText="取消" [(ngModel)]="gaming">
+        <ion-option value="差旅">差旅</ion-option>
+        <ion-option value="缴费">缴费</ion-option>
+        <ion-option value="租赁">租赁</ion-option>
+        <ion-option value="政府公务">公务</ion-option>
+        <ion-option value="送礼招待">招待</ion-option>
+        <ion-option value="购买服务">服务</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label  floating>金额￥</ion-label>
+      <ion-textarea  rows="1">{{goodsID}}</ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label  floating>说明</ion-label>
+      <ion-textarea  rows="2"></ion-textarea>
+    </ion-item>
+
+
+  </ion-list>
 
 </ion-content>
