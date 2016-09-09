@@ -12,10 +12,12 @@
 @import "../pages/sales/contract/contract";
 @import "../pages/sales/contract-item/contract-item";
 @import "../pages/sales/contract-list/contract-list";
+@import "../pages/sales/contract-goodslist/contract-goodslist";
 //采购
 @import "../pages/purchase/order/order";
 @import "../pages/purchase/order-item/order-item";
 @import "../pages/purchase/order-list/order-list";
+@import "../pages/purchase/purchase-goodslist/purchase-goodslist";
 //财务
 @import "../pages/finance/bills/bills";
 @import "../pages/finance/bills-item/bills-item";
@@ -31,6 +33,13 @@
 @import "../pages/setting/goods-list/goods-list";
 
 @import "../pages/setting/settinghome/settinghome";
+
+@import "../pages/setting/employee/employee";
+@import "../pages/setting/employee-list/employee-list";
+@import "../pages/setting/human/human";
+@import "../pages/setting/human-list/human-list";
+@import "../pages/setting/events/events";
+@import "../pages/setting/events-list/events-list";
 
 @import "../pages/setting/report-asset/report-asset";
 @import "../pages/setting/report-balance/report-balance";
