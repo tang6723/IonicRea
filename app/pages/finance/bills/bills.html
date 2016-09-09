@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title style="text-align: center">收付款{{billid}}</ion-title>
+    <ion-title style="text-align: center">{{title}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,5 +15,90 @@
 
 <ion-content padding>
 
+<ion-list>
+  <ion-item>
+    <ion-row>
+      <ion-col center text-center>
+        <button>
+          <ion-icon name="ios-add-circle-outline"></ion-icon>
+          添加
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <button>
+          <ion-icon name="ios-checkbox-outline"></ion-icon>
+          保存
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <button>
+          <ion-icon name="ios-arrow-dropdown-outline"></ion-icon>
+          分期
+        </button>
+      </ion-col>
+      <ion-col center text-center>
+        <button>
+          <ion-icon name="ios-backspace-outline"></ion-icon>
+          返回
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+  <ion-item-divider>{{billtype}}合同</ion-item-divider>
+  <ion-item>
+    <ion-row>
+      <ion-col width-67>
+        <h2>{{customer}}</h2>
+      </ion-col>
+      <ion-col width-33>
+        ￥{{billtotal}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-note>{{billid}}</ion-note>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>{{dateissue}}</ion-note>
+      </ion-col>
+      <ion-col center text-right>
+        <span item-right primary>{{billstate}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+  <ion-item>
+    <ion-row>
+      <ion-col >
+        <h2>同意，同意，同意</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-note>王经理</ion-note>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-note>{{dateissue}}</ion-note>
+      </ion-col>
+      <ion-col center text-right>
+        <ion-badge item-right primary>审核</ion-badge>
+      </ion-col>
+    </ion-row>
+
+  </ion-item>
+
+  <ion-item-divider primary>会计操作</ion-item-divider>
+  <ion-item>
+    <ion-label  floating>{{title}}金额￥</ion-label>
+    <ion-textarea  rows="1">{{goodsID}}</ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label  floating>会计摘要</ion-label>
+    <ion-textarea  rows="2"></ion-textarea>
+  </ion-item>
+
+</ion-list>
 
 </ion-content>
