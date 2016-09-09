@@ -16,64 +16,64 @@
 <ion-content padding>
   <ion-list>
     <ion-item-divider >资源 </ion-item-divider>
-    <ion-item>
+    <button ion-item [navPush]="goodsPage">
       <ion-icon name="ios-archive" item-left></ion-icon>
       商品设置
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
+    </button>
+    <button ion-item [navPush]="employeePage">
       <ion-icon name="ios-create-outline" item-left></ion-icon>
       人力资源设置
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
+    </button>
 
     <ion-item-divider >事件 </ion-item-divider>
-    <ion-item>
+    <button ion-item [navPush]="eventsPage">
       <ion-icon name="ios-flash-outline" item-left></ion-icon>
       事件设置
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
+    </button>
 
     <ion-item-divider >代理 </ion-item-divider>
-    <ion-item>
+    <button ion-item [navPush]="goodsPage">
       <ion-icon name="ios-contacts-outline" item-left></ion-icon>
       客户设置
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
+    </button>
 
     <ion-item-divider primary>员工 </ion-item-divider>
-    <ion-item>
+    <button ion-item [navPush]="employeePage">
       <ion-icon name="ios-people-outline" item-left></ion-icon>
       员工设置
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
+    </button>
 
     <ion-item-divider primary>报表 </ion-item-divider>
-    <ion-item>
+    <button ion-item [navPush]="goodsPage">
       <ion-icon name="ios-briefcase-outline" item-left></ion-icon>
       资产负债表
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
+    </button >
+    <button ion-item>
       <ion-icon name="logo-usd" item-left></ion-icon>
       账户余额表
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
+    </button>
+    <button ion-item [navPush]="goodsPage">
       <ion-icon name="logo-yen" item-left></ion-icon>
       利润表
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
+    </button>
+    <button ion-item [navPush]="goodsPage">
       <ion-icon name="ios-navigate-outline" item-left></ion-icon>
       收入表
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
-    <ion-item>
+    </button>
+    <button ion-item [navPush]="goodsPage">
       <ion-icon name="md-exit" item-left></ion-icon>
       支出表
       <ion-icon name="ios-arrow-forward" item-right></ion-icon>
-    </ion-item>
+    </button>
 
   </ion-list>
 
