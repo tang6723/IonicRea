@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import {HumanListPage} from '../human-list/human-list';
+
 /*
   Generated class for the HumanPage page.
 
@@ -14,6 +16,11 @@ export class HumanPage {
 
   constructor(private navCtrl: NavController) {
 
+  }
+
+  pophumanlist()
+  {
+    this.navCtrl.push(HumanListPage, {});
   }
 
 }

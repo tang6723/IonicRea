@@ -6,13 +6,39 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>人力资源列表</ion-title>
+  <ion-navbar primary>
+    <ion-title style="text-align: center">人力资源列表</ion-title>
+    <ion-buttons end>
+      <button royal (click)="AddGoods()">
+        <ion-icon name="ios-add-circle-outline"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
+  <ion-item-divider primary>人力资源列表</ion-item-divider>
+  <ion-item *ngFor="let item of items" >
+    <ion-row>
+      <ion-col width-67>
+        <h2>{{item.name}}</h2>
+      </ion-col>
+      <ion-col width-33>
+        单价：￥{{item.price}}元/小时
+      </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+        <ion-note>分类：{{item.fenlei}}</ion-note>
+      </ion-col>
+      <ion-col center text-right>
+        <span item-right primary>
+          <button small (click)="EditGoods(item)">编辑</button>
+          <button small danger (click)="DeleteGoods(item)">删除</button>
+        </span>
+      </ion-col>
+    </ion-row>
+  </ion-item>
 </ion-content>

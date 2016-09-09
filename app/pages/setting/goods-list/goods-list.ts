@@ -74,4 +74,9 @@ export class GoodsListPage {
     alert.present();
   }
 
+  AddGoods()
+  {
+    this.navCtrl.push(GoodsPage, {});
+  }
+
 }
