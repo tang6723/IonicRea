@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>商品列表</ion-title>
+  <ion-navbar primary>
+    <ion-title style="text-align: center">商品列表</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -62,3 +62,13 @@
   </ion-item>
 
 </ion-content>
+
+<ion-footer>
+  <ion-buttons end>
+    <button small (click)="pushMore()">
+      <ion-icon name="ios-add-circle-outline">
+        增加
+      </ion-icon>
+    </button>
+  </ion-buttons>
+</ion-footer>
