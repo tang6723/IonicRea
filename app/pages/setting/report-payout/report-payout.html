@@ -9,7 +9,7 @@
   <ion-navbar primary>
     <ion-title style="text-align: center">支出表</ion-title>
     <ion-buttons end>
-      <button royal (click)="popHome()">
+      <button  (click)="popHome()">
         <ion-icon name="ios-home"></ion-icon>
       </button>
     </ion-buttons>
@@ -17,10 +17,10 @@
 
   <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top>
     <ion-segment [(ngModel)]="typeList" [attr.light]="isAndroid ? '' : null">
-      <ion-segment-button value="class">
+      <ion-segment-button value="class" (ionSelect)="selectedClass()">
         分类
       </ion-segment-button>
-      <ion-segment-button value="month">
+      <ion-segment-button value="month" (ionSelect)="selectedMonth()">
         月度
       </ion-segment-button>
     </ion-segment>
@@ -30,6 +30,16 @@
 
 
 <ion-content padding>
+
+  <ion-item>
+    <ion-label>选择日期</ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="myDate"
+                  monthNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"
+                  monthShortNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"
+                  cancelText="取消"
+                  doneText="确定">
+    </ion-datetime>
+  </ion-item>
 
   <div [ngSwitch]="typeList">
     <div *ngSwitchCase="'class'">
@@ -42,9 +52,7 @@
           </ion-row>
         </ion-item>
       </ion-list>
-      <ion-footer>
-        <ion-label item-left text-left>总计：￥{{totalSum}}</ion-label>
-      </ion-footer>
+
     </div>
     <div *ngSwitchCase="'month'">
       <ion-list>
@@ -56,9 +64,16 @@
           </ion-row>
         </ion-item>
       </ion-list>
-      <ion-footer>
-        <ion-label item-left text-left>总计：￥{{totalSumMonth}}</ion-label>
-      </ion-footer>
+
     </div>
   </div>
 </ion-content>
+<ion-footer>
+  <div [hidden]="!isValidClass">
+  <ion-label item-left text-left>分类总计：￥{{totalSum}}</ion-label>
+  </div>
+  <div [hidden]="!isValidMonth">
+    <ion-label item-left text-left>月总计：￥{{totalSumMonth}}</ion-label>
+  </div>
+</ion-footer>
+

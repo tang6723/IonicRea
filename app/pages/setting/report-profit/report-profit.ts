@@ -11,90 +11,24 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/setting/report-profit/report-profit.html',
 })
 export class ReportProfitPage {
-  pet: string = "1";
+
   stock:string = "stock1";
+  public myDate:string;
+  typeList = "Type";
   isAndroid: boolean = false;
 
-  appType = "Paid";
-  safari = "Shared Links";
-  weather = "sunny";
 
-  apps = {
-    "Paid": [
-      {
-        name: 'Monopoly',
-        price: '$0.99'
-      },
-      {
-        name: 'Angry Birds',
-        price: '$2.99'
-      }
-    ],
-    "Free": [
-      {
-        name: 'Snapchat',
-        price: 'GET'
-      },
-      {
-        name: 'Instagram',
-        price: 'OPEN'
-      }
-    ],
-    "Top": [
-      {
-        name: 'Spotify',
-        price: 'OPEN'
-      },
-      {
-        name: 'Pandora',
-        price: 'GET'
-      }
-    ]
-  };
 
-  items = {
-    "Bookmarks": [
-      {
-        name: 'Favorites',
-        icon: 'ios-star-outline'
-      },
-      {
-        name: 'History',
-        icon: 'ios-clock-outline'
-      }
-    ],
-    "Reading List": [
-      {
-        name: 'Terms of Service',
-        icon: 'create'
-      },
-      {
-        name: 'User Guide',
-        icon: 'book'
-      }
-    ],
-    "Shared Links": [
-      {
-        name: 'Ionic Framework',
-        icon: 'ionic'
-      },
-      {
-        name: 'Learn Angular',
-        icon: 'logo-angular'
-      }
-    ]
-  };
+
 
   constructor(private navCtrl: NavController) {
+    this.isAndroid = false;
 
-  }
-  getItems(type) {
-    return this.apps[type];
+
+    this.myDate = new Date().toISOString();
+    setInterval(() => this.myDate = new Date().toISOString(), 1000);
   }
 
-  getSafariItems(type) {
-    return this.items[type];
-  }
   popHome(){
     this.navCtrl.popToRoot();
   }

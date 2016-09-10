@@ -14,8 +14,11 @@ export class ReportPayoutPage {
 
   typeList: string = "class";
   isAndroid: boolean = false;
+  isValidClass:boolean=true;
+  isValidMonth:boolean=false;
   totalSum: number = 0;
   totalSumMonth: number = 0;
+  public myDate:string;
 
   classList: any = [
     {name: "销售成本", sum: 80000, percent: "69.29%"},
@@ -43,6 +46,9 @@ export class ReportPayoutPage {
 
   constructor(private navCtrl: NavController, private platform: Platform) {
     this.isAndroid = platform.is('android');
+    this.myDate = new Date().toISOString();
+    this.isValidClass=true;
+    this.isValidMonth=false;
 
     for(var i=0;i<this.classList.length;i++)
     {
@@ -57,6 +63,14 @@ export class ReportPayoutPage {
 
   popHome() {
     this.navCtrl.popToRoot();
+  }
+  selectedClass(){
+    this.isValidClass=true;
+    this.isValidMonth=false;
+  }
+  selectedMonth(){
+    this.isValidClass=false;
+    this.isValidMonth=true;
   }
 
 }
