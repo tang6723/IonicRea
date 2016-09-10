@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {ContractPage} from '../contract/contract';
 
 /*
   Generated class for the ContractListPage page.
@@ -34,6 +35,11 @@ export class ContractListPage {
 
   constructor(private navCtrl: NavController) {
 
+  }
+
+  itemSelected(item: any)
+  {
+    this.navCtrl.push(ContractPage, {});
   }
 
 }

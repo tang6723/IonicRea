@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import {OrderPage} from '../order/order';
+
 /*
   Generated class for the OrderListPage page.
 
@@ -35,6 +37,11 @@ export class OrderListPage {
 
   constructor(private navCtrl: NavController) {
 
+  }
+
+  itemSelected(item: any)
+  {
+    this.navCtrl.push(OrderPage, {});
   }
 
 }

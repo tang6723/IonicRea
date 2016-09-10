@@ -12,6 +12,8 @@ import { NavController } from 'ionic-angular';
 })
 export class ReportPayoutPage {
 
+   typeList: string = 'class';
+
   constructor(private navCtrl: NavController) {
 
   }
