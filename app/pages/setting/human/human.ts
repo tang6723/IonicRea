@@ -18,7 +18,7 @@ export class HumanPage {
 
   }
 
-  pophumanlist()
+  pushhumanlist()
   {
     this.navCtrl.push(HumanListPage, {});
   }

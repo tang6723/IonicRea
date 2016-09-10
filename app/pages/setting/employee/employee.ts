@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import {EmployeeListPage} from '../employee-list/employee-list';
+
 /*
   Generated class for the EmployeePage page.
 
@@ -14,6 +16,11 @@ export class EmployeePage {
 
   constructor(private navCtrl: NavController) {
 
+  }
+
+  pushemployeelist()
+  {
+    this.navCtrl.push(EmployeeListPage, {});
   }
 
 }
