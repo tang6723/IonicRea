@@ -16,4 +16,8 @@ export class ReportProfitPage {
 
   }
 
+  popHome(){
+    this.navCtrl.popToRoot();
+  }
+
 }

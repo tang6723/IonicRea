@@ -16,4 +16,8 @@ export class ReportBalancePage {
 
   }
 
+  popHome(){
+    this.navCtrl.popToRoot();
+  }
+
 }

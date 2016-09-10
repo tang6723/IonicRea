@@ -16,4 +16,8 @@ export class ReportAssetPage {
 
   }
 
+  popHome(){
+    this.navCtrl.popToRoot();
+  }
+
 }

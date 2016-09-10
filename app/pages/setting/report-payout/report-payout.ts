@@ -16,4 +16,8 @@ export class ReportPayoutPage {
 
   }
 
+  popHome(){
+    this.navCtrl.popToRoot();
+  }
+
 }

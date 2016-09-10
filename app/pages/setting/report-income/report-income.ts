@@ -16,4 +16,8 @@ export class ReportIncomePage {
 
   }
 
+  popHome(){
+    this.navCtrl.popToRoot();
+  }
+
 }
