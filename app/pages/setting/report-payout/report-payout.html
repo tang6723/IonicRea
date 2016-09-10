@@ -13,13 +13,8 @@
         <ion-icon name="ios-home"></ion-icon>
       </button>
     </ion-buttons>
-
   </ion-navbar>
 
-</ion-header>
-
-
-<ion-content padding>
   <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top>
     <ion-segment [(ngModel)]="typeList" [attr.light]="isAndroid ? '' : null">
       <ion-segment-button value="class">
@@ -30,25 +25,40 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-  <div [ngSwitch]="typeList">
-    <ion-list *ngSwitchCase="'class'">
-      <ion-item>
-        <ion-row>
-          <ion-col width-50 style="font-size: 9px; text-align: left;">销售成本</ion-col>
-          <ion-col width-25 style="font-size: 9px; text-align: center;">80000</ion-col>
-          <ion-col width-25 style="font-size: 9px; text-align: right;">69.29%</ion-col>
-        </ion-row>
-      </ion-item>
-    </ion-list>
 
-    <ion-list *ngSwitchCase="'month'">
-      <ion-item>
-        <ion-row>
-          <ion-col width-50 style="font-size: 9px; text-align: left;">销售成本111</ion-col>
-          <ion-col width-25 style="font-size: 9px; text-align: center;">22280000</ion-col>
-          <ion-col width-25 style="font-size: 9px; text-align: right;">1169.29%</ion-col>
-        </ion-row>
-      </ion-item>
-    </ion-list>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div [ngSwitch]="typeList">
+    <div *ngSwitchCase="'class'">
+      <ion-list>
+        <ion-item *ngFor="let item of classList">
+          <ion-row>
+            <ion-col width-50 style="font-size: 9px; text-align: left;">{{item.name}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: center; color: green">{{item.sum}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: right;">{{item.percent}}</ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+      <ion-footer>
+        <ion-label item-left text-left>总计：￥{{totalSum}}</ion-label>
+      </ion-footer>
+    </div>
+    <div *ngSwitchCase="'month'">
+      <ion-list>
+        <ion-item *ngFor="let item of monthList">
+          <ion-row>
+            <ion-col width-50 style="font-size: 9px; text-align: left;">{{item.date}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: center; color: green">{{item.sum}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: right;">{{item.percent}}</ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+      <ion-footer>
+        <ion-label item-left text-left>总计：￥{{totalSumMonth}}</ion-label>
+      </ion-footer>
+    </div>
   </div>
 </ion-content>
