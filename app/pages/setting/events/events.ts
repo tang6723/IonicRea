@@ -24,7 +24,8 @@ export class EventsPage {
 
 
   constructor(private navCtrl: NavController) {
-    this.eventtype="销售";
+    //默认值一定要跟VALUE一样，不然不显示
+    this.eventtype="101";
     this.gender="女";
 
     this.eventAlertOpts = {
