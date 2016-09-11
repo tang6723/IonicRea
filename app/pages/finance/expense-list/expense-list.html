@@ -6,13 +6,20 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>费用列表</ion-title>
+  <ion-navbar primary="">
+    <ion-title style="text-align: center;">费用列表</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-item *ngFor="let item of expenseList" (click)="itemSelected(item)">
+    <h2>{{item.name}}</h2>
+    <h3>{{item.remark}}</h3>
+    <p>
+      <ion-badge item-right>{{item.post}}</ion-badge>  总价：￥{{item.total}}
+    </p>
+    <span item-right primary>{{item.data}}</span>
+  </ion-item>
 </ion-content>
