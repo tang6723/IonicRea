@@ -15,7 +15,7 @@
     </ion-buttons>
   </ion-navbar>
 
-  <ion-toolbar [attr.primary]="isAndroid ? '' : null" no-border-top>
+  <ion-toolbar  no-border-top>
     <ion-segment [(ngModel)]="typeList" [attr.light]="isAndroid ? '' : null">
       <ion-segment-button value="class" (ionSelect)="selectedClass()">
         分类

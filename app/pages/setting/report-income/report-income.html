@@ -14,10 +14,64 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+    <ion-toolbar  no-border-top>
+      <ion-segment [(ngModel)]="typeList" [attr.light]="isAndroid ? '' : null">
+        <ion-segment-button value="class" (ionSelect)="selectedClass()">
+          分类
+        </ion-segment-button>
+        <ion-segment-button value="month" (ionSelect)="selectedMonth()">
+          月度
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
 
 </ion-header>
 
-
 <ion-content padding>
+  <ion-item>
+    <ion-label>选择日期</ion-label>
+    <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="myDate"
+                  monthNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"
+                  monthShortNames="一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月"
+                  cancelText="取消"
+                  doneText="确定">
+    </ion-datetime>
+  </ion-item>
+  <div [ngSwitch]="typeList">
+    <div *ngSwitchCase="'class'">
+      <ion-list>
+        <ion-item *ngFor="let item of classList">
+          <ion-row>
+            <ion-col width-50 style="font-size: 9px; text-align: left;">{{item.name}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: center; color: green">{{item.sum}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: right;">{{item.percent}}</ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
 
+    </div>
+    <div *ngSwitchCase="'month'">
+      <ion-list>
+        <ion-item *ngFor="let item of monthList">
+          <ion-row>
+            <ion-col width-50 style="font-size: 9px; text-align: left;">{{item.date}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: center; color: green">{{item.sum}}</ion-col>
+            <ion-col width-25 style="font-size: 9px; text-align: right;">{{item.percent}}</ion-col>
+          </ion-row>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </div>
 </ion-content>
+<ion-footer>
+  <div [hidden]="!isValidClass">
+    <ion-label item-left text-left>分类总计：￥{{totalSum}}</ion-label>
+  </div>
+  <div [hidden]="!isValidMonth">
+    <ion-label item-left text-left>月总计：￥{{totalSumMonth}}</ion-label>
+  </div>
+</ion-footer>
+
+
