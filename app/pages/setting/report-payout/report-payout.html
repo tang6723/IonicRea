@@ -25,12 +25,9 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
   <ion-item>
     <ion-label>选择日期</ion-label>
     <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="myDate"
@@ -40,7 +37,6 @@
                   doneText="确定">
     </ion-datetime>
   </ion-item>
-
   <div [ngSwitch]="typeList">
     <div *ngSwitchCase="'class'">
       <ion-list>
