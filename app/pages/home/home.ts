@@ -23,8 +23,8 @@ export class HomePage {
 
   time: Date;
 
-  public username:string="王宝强";
-  public usertitle:string="管理员";
+  public username:string=document.getElementById("rootRealName").getAttribute("value");
+  public usertitle:string=document.getElementById("rootRole").getAttribute("value");
   public myDate:string;
 
   public event = {

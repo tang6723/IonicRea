@@ -29,6 +29,8 @@ export class ContractPage {
   customerList; any;
   typeTmp: string;
 
+  userRole: boolean = true;
+
   private items: any = [
     {imgurl: 'ios-flag-outline',id: '123456', name: '商品1', price: 200.00, num: 3, specification: '规格33MM'},
     {imgurl: 'ios-flame-outline',id: '123457', name: '商品2', price: 1120.00, num: 9, specification: '规格66MM'},
@@ -49,6 +51,7 @@ export class ContractPage {
   }
   constructor(private navCtrl: NavController, private alertCtrl: AlertController, private  navParams: NavParams) {
     this.initializeEmployeeList();
+    this.userRole = document.getElementById("rootRole").getAttribute("value") == "员工";
   }
 
   gotoSlider(i: number){

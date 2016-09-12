@@ -1,0 +1,24 @@
+<ion-card>
+  <ion-list>
+
+    <ion-item-divider style="text-align: center; font-size: 25px; height: 100px; vertical-align: bottom;" primary>
+      登录
+    </ion-item-divider>
+    <ion-item>
+      <ion-icon name="md-contacts" item-left primary></ion-icon>
+      <ion-label stacked>用户名</ion-label>
+      <ion-input type="text" [(ngModel)]="userName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="md-key" item-left primary></ion-icon>
+      <ion-label stacked>密码</ion-label>
+      <ion-input type="password" [(ngModel)]="passWord"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button primary block (click)="loginClick()">Sign In</button>
+  </div>
+</ion-card>

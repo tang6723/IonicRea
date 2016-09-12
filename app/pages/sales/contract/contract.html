@@ -18,7 +18,7 @@
     </ion-buttons>
   </ion-navbar>
 
-
+  <div *ngIf="userRole">
     <ion-slides #myClider>
       <ion-slide>
         <ion-row wrap>
@@ -38,7 +38,7 @@
               <h5>商品</h5>
             </div>
           </ion-col>
-          <ion-col  >
+          <ion-col>
             <div>
               <button fab style="position:relative" (click)="pushItem(1)">
                 <ion-icon name="md-checkmark"></ion-icon>
@@ -55,11 +55,11 @@
               <h5>收款</h5>
             </div>
           </ion-col>
-        <ion-col center width-10>
-          <button style="position:relative" clear (click)="gotoSlider(2)">
-            <ion-icon name="ios-arrow-forward"></ion-icon>
-          </button>
-        </ion-col>
+          <ion-col center width-10>
+            <button style="position:relative" clear (click)="gotoSlider(2)">
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </button>
+          </ion-col>
         </ion-row>
       </ion-slide>
       <ion-slide>
@@ -104,7 +104,86 @@
         </ion-row>
       </ion-slide>
     </ion-slides>
+  </div>
+  <div *ngIf="!userRole">
+    <ion-slides #myClider>
+      <ion-slide>
+        <ion-row wrap>
+          <ion-col>
+            <div>
+              <button fab style="position:relative" (click)="pushItem(1)">
+                <ion-icon name="md-checkmark"></ion-icon>
+              </button>
+              <h5>审批</h5>
+            </div>
+          </ion-col>
 
+          <ion-col>
+            <div>
+              <button fab style="position:relative" (click)="pushItem(2)">
+                <ion-icon name="logo-yen"></ion-icon>
+              </button>
+              <h5>收款</h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button fab style="position:relative" (click)="pushItem(3)">
+                <ion-icon name="ios-card"></ion-icon>
+              </button>
+              <h5>发票</h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button fab style="position:relative" (click)="pushItem(4)">
+                <ion-icon name="ios-clipboard-outline"></ion-icon>
+              </button>
+              <h5>出库</h5>
+            </div>
+          </ion-col>
+          <ion-col center width-10>
+            <button style="position:relative" clear (click)="gotoSlider(2)">
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+      <ion-slide>
+        <ion-row wrap>
+          <ion-col center width-10>
+            <button style="position:relative" clear (click)="gotoSlider(0)">
+              <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button fab style="position:relative" (click)="pushItem(5)">
+                <ion-icon name="ios-car"></ion-icon>
+              </button>
+              <h5>运输</h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <button fab style="position:relative" (click)="pushItem(6)">
+                <ion-icon name="ios-build-outline"></ion-icon>
+              </button>
+              <h5>安装</h5>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-header>
 
 
@@ -125,15 +204,16 @@
 
     <ion-item-divider primary>商品列表</ion-item-divider>
     <ion-item-sliding *ngFor="let item of items">
-    <ion-item (click)="itemSelected(items)">
-      <ion-icon  name={{item.imgurl}} item-left></ion-icon>
-      <h2>{{item.name}}</h2>
-      <h3>{{item.specification}}</h3>
-      <p>
-        <ion-badge item-right>{{item.num}}</ion-badge>  单价：￥{{item.price}}
-      </p>
-      <span item-right primary>小计：￥{{item.num*item.price}}</span>
-    </ion-item>
+      <ion-item (click)="itemSelected(items)">
+        <ion-icon name={{item.imgurl}} item-left></ion-icon>
+        <h2>{{item.name}}</h2>
+        <h3>{{item.specification}}</h3>
+        <p>
+          <ion-badge item-right>{{item.num}}</ion-badge>
+          单价：￥{{item.price}}
+        </p>
+        <span item-right primary>小计：￥{{item.num*item.price}}</span>
+      </ion-item>
       <ion-item-options side="right">
         <button (click)="EditGoods(item)">编辑</button>
         <button danger (click)="DeleteGoods(item)">删除</button>
