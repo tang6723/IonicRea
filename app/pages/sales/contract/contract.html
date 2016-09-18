@@ -193,7 +193,7 @@
     <ion-item-divider primary>{{billstate}}
       <h2 item-right>合计：￥{{billtotal}}元</h2>
     </ion-item-divider>
-    <ion-item>
+    <ion-item (click)="showCustomerRadio()">
       <ion-icon name="ios-contacts" primary item-left></ion-icon>
       <h2>{{customer}}</h2>
       <P>{{customeraddress}}</P>
@@ -202,7 +202,11 @@
       </ion-note>
     </ion-item>
 
-    <ion-item-divider primary>商品列表</ion-item-divider>
+    <ion-item-divider primary>商品列表
+      <button primary (click)="pushGoodsItem()" item-right>
+        <ion-icon name="ios-add-circle-outline"></ion-icon>
+      </button>
+    </ion-item-divider>
     <ion-item-sliding *ngFor="let item of items">
       <ion-item (click)="itemSelected(items)">
         <ion-icon name={{item.imgurl}} item-left></ion-icon>
