@@ -9,7 +9,7 @@
     padding: 3px;
     border-radius: 2px;
     text-align: center;
-    height:120px;
+    //height:120px;
   }
 
   ion-item h2 {
@@ -18,8 +18,29 @@
   .slide-zoom {
     height: 100%;
   }
+  ion-item h5{
+    margin-top: 0rem;
+  }
 
   .fab-tang {
     position: relative;
   }
+}
+
+.price-strong {
+  font-size: 1.7rem;
+  color: #06c1ae;
+}
+
+[padding] h1:first-child,
+[padding] h2:first-child,
+[padding] h3:first-child,
+[padding] h4:first-child,
+[padding] h5:first-child,
+[padding] h6:first-child {
+  margin-top: 0rem; }
+
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }

@@ -12,15 +12,25 @@
     height:120px;
   }
 
-  ion-item h2 {
-    font-size:2.0rem;
-    margin-top: 0px;
-  }
+
   .slide-zoom {
     height: 100%;
   }
-
   .fab-tang {
     position: relative;
   }
+
+
 }
+.price-strong {
+  font-size: 1.7rem;
+  color: #06c1ae;
+}
+
+[padding] h1:first-child,
+[padding] h2:first-child,
+[padding] h3:first-child,
+[padding] h4:first-child,
+[padding] h5:first-child,
+[padding] h6:first-child {
+  margin-top: 0rem; }

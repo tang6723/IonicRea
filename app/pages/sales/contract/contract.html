@@ -214,7 +214,7 @@
         <h3>{{item.specification}}</h3>
         <p>
           <ion-badge item-right>{{item.num}}</ion-badge>
-          单价：￥{{item.price}}
+          单价：<span class="price-strong">￥{{item.price}}</span>
         </p>
         <span item-right primary>小计：￥{{item.num*item.price}}</span>
       </ion-item>
@@ -225,7 +225,7 @@
     </ion-item-sliding>
 
     <ion-item-divider>
-      <P item-right>运费：￥<span danger>{{freight}}</span>元</P>
+      <P item-right><span class="price-strong">运费：￥<span danger>{{freight}}</span>元</span></P>
     </ion-item-divider>
     <ion-item-divider>
       <h2 item-right>合计：￥<span danger>{{billtotal}}</span>元</h2>
