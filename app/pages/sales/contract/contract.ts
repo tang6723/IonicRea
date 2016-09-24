@@ -5,6 +5,8 @@ import {ContractListPage} from '../contract-list/contract-list';
 import {ContractItemPage} from '../contract-item/contract-item';
 import {ContractGoodsListPage} from '../contract-goodslist/contract-goodslist';
 
+declare var hprose;
+
 /*
   Generated class for the ContractPage page.
 
@@ -52,6 +54,23 @@ export class ContractPage {
   constructor(private navCtrl: NavController, private alertCtrl: AlertController, private  navParams: NavParams) {
     this.initializeEmployeeList();
     this.userRole = document.getElementById("rootRole").getAttribute("value") == "员工";
+  }
+
+  ngAfterViewInit(){
+    console.time("hprose");
+    var client = hprose.Client.create("http://www.hprose.com/example/", ["hello"]);
+    client.hello("World!").then(function (result) {
+      //alert(result);
+      console.info(result);
+      console.log(result);
+      console.warn(result);
+      console.error(result);
+
+    }, function (err) {
+      //alert(err);
+      console.error(err);
+    })
+    console.timeEnd("hprose");
   }
 
   gotoSlider(i: number){
