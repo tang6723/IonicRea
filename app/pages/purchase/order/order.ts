@@ -4,6 +4,7 @@ import { NavController,Slides, AlertController, NavParams } from 'ionic-angular'
 import {OrderItemPage} from '../order-item/order-item';
 import {OrderListPage} from '../order-list/order-list';
 import {PurchaseGoodsListPage} from '../purchase-goodslist/purchase-goodslist';
+import {PurchaseItemTimelinePage} from '../purchase-item-timeline/purchase-item-timeline';
 
 /*
   Generated class for the OrderPage page.
@@ -61,6 +62,11 @@ export class OrderPage {
 
   popHome(){
     this.navCtrl.popToRoot();
+  }
+
+  pushTimeLine() {
+    this.navCtrl.push(PurchaseItemTimelinePage, {id:this.billid,
+      type:this.typeTmp});
   }
 
   pushMore()
