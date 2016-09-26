@@ -4,6 +4,7 @@ import {NavController, Slides, AlertController, NavParams} from 'ionic-angular';
 import {ContractListPage} from '../contract-list/contract-list';
 import {ContractItemPage} from '../contract-item/contract-item';
 import {ContractGoodsListPage} from '../contract-goodslist/contract-goodslist';
+import {ContractItemTimelinePage} from '../contract-item-timeline/contract-item-timeline';
 
 declare var hprose;
 
@@ -84,6 +85,11 @@ export class ContractPage {
   pushMore()
   {
     this.navCtrl.push(ContractListPage,{});
+  }
+
+  pushTimeLine() {
+    this.navCtrl.push(ContractItemTimelinePage, {id:this.billid,
+      type:this.typeTmp});
   }
 
 
