@@ -39,6 +39,11 @@
       </ion-row>
     </ion-item>
 
+    <ion-item *ngIf="!(secondParam=='审批')">
+      <ion-label  floating>{{secondParam}}金额</ion-label>
+      <ion-textarea id="txtJE" rows="2"></ion-textarea>
+    </ion-item>
+
     <ion-item>
       <ion-label  floating>{{secondParam}}情况</ion-label>
       <ion-textarea id="text2" rows="2"></ion-textarea>
@@ -46,7 +51,7 @@
 
     <ion-item>
       <ion-row>
-        <ion-col center text-center>
+        <ion-col center text-center *ngIf="secondParam=='审批'">
           <button>
             <ion-icon name="ios-close-circle-outline"></ion-icon>
             驳回

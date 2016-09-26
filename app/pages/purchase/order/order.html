@@ -21,91 +21,91 @@
     </ion-buttons>
   </ion-navbar>
 
-  <ion-slides #myClider *ngIf="userRole">
-    <ion-slide>
-      <ion-row wrap>
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="showCustomerRadio()">
-              <ion-icon name="ios-contacts"></ion-icon>
-            </button>
-            <h5>客户</h5>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="pushGoodsItem()">
-              <ion-icon name="ios-cart"></ion-icon>
-            </button>
-            <h5>商品</h5>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="pushItem(1)">
-              <ion-icon name="md-checkmark"></ion-icon>
-            </button>
-            <h5>审批</h5>
-          </div>
-        </ion-col>
+  <!--<ion-slides #myClider *ngIf="userRole">-->
+    <!--<ion-slide>-->
+      <!--<ion-row wrap>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="showCustomerRadio()">-->
+              <!--<ion-icon name="ios-contacts"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>客户</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="pushGoodsItem()">-->
+              <!--<ion-icon name="ios-cart"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>商品</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="pushItem(1)">-->
+              <!--<ion-icon name="md-checkmark"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>审批</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
 
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="pushItem(2)">
-              <ion-icon name="logo-yen"></ion-icon>
-            </button>
-            <h5>付款</h5>
-          </div>
-        </ion-col>
-        <ion-col center width-10>
-          <button style="position:relative" clear (click)="gotoSlider(2)">
-            <ion-icon name="ios-arrow-forward"></ion-icon>
-          </button>
-        </ion-col>
-      </ion-row>
-    </ion-slide>
-    <ion-slide>
-      <ion-row wrap>
-        <ion-col center width-10>
-          <button style="position:relative" clear (click)="gotoSlider(0)">
-            <ion-icon name="ios-arrow-back"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="pushItem(3)">
-              <ion-icon name="ios-card"></ion-icon>
-            </button>
-            <h5>发票</h5>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="pushItem(4)">
-              <ion-icon name="ios-clipboard-outline"></ion-icon>
-            </button>
-            <h5>验收</h5>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <button fab style="position:relative" (click)="pushItem(5)">
-              <ion-icon name="ios-car"></ion-icon>
-            </button>
-            <h5>入库</h5>
-          </div>
-        </ion-col>
-        <ion-col>
-          <div>
-            <!--<button fab style="position:relative" (click)="pushItem(6)">
-              <ion-icon name="ios-build-outline"></ion-icon>
-            </button>
-            <h5>...</h5>-->
-          </div>
-        </ion-col>
-      </ion-row>
-    </ion-slide>
-  </ion-slides>
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="pushItem(2)">-->
+              <!--<ion-icon name="logo-yen"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>付款</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col center width-10>-->
+          <!--<button style="position:relative" clear (click)="gotoSlider(2)">-->
+            <!--<ion-icon name="ios-arrow-forward"></ion-icon>-->
+          <!--</button>-->
+        <!--</ion-col>-->
+      <!--</ion-row>-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<ion-row wrap>-->
+        <!--<ion-col center width-10>-->
+          <!--<button style="position:relative" clear (click)="gotoSlider(0)">-->
+            <!--<ion-icon name="ios-arrow-back"></ion-icon>-->
+          <!--</button>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="pushItem(3)">-->
+              <!--<ion-icon name="ios-card"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>发票</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="pushItem(4)">-->
+              <!--<ion-icon name="ios-clipboard-outline"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>验收</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--<button fab style="position:relative" (click)="pushItem(5)">-->
+              <!--<ion-icon name="ios-car"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>入库</h5>-->
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col>-->
+          <!--<div>-->
+            <!--&lt;!&ndash;<button fab style="position:relative" (click)="pushItem(6)">-->
+              <!--<ion-icon name="ios-build-outline"></ion-icon>-->
+            <!--</button>-->
+            <!--<h5>...</h5>&ndash;&gt;-->
+          <!--</div>-->
+        <!--</ion-col>-->
+      <!--</ion-row>-->
+    <!--</ion-slide>-->
+  <!--</ion-slides>-->
 
   <ion-slides #myClider *ngIf="!userRole">
     <ion-slide>
