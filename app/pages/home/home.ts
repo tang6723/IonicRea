@@ -8,6 +8,8 @@ import {BillsListPage} from '../finance/bills-list/bills-list';
 import {ExpensePage} from '../finance/expense/expense';
 import {SettinghomePage} from '../setting/settinghome/settinghome';
 
+declare var hprose;
+
 
 @Component({
   templateUrl: 'build/pages/home/home.html'

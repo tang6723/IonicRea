@@ -5,6 +5,8 @@ import {Component} from '@angular/core';
 import {NavController, AlertController} from 'ionic-angular';
 import {HomePage} from '../home/home';
 
+declare var hprose;
+
 import {MyApp} from '../../app';
 
 @Component({
@@ -80,5 +82,12 @@ export class LoginPage {
       });
       alert.present();
     }
+
+    /*
+    1、获取界面的录入值
+    2、通过HPRose传用户名、密码到服务器认证登录信息
+    3、认证成功返回登陆对象在客户端缓存，跳转到Home页，设置Home页为rootPage
+    4、登录失败
+     */
   }
 }
