@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import {ContractPage} from '../sales/contract/contract';
+import {ContractListPage} from '../sales/contract-list/contract-list';
 import {OrderPage} from '../purchase/order/order';
 import {GoodsListPage} from '../setting/goods-list/goods-list';
 import {BillsListPage} from '../finance/bills-list/bills-list';
@@ -17,6 +18,7 @@ declare var hprose;
 export class HomePage {
 
   contractPage=ContractPage;
+  contractListPage=ContractListPage;
   orderPage=OrderPage;
   goodsListPage=GoodsListPage;
   billsListPage=BillsListPage;

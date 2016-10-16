@@ -12,10 +12,15 @@
     <ion-row wrap >
       <ion-col>
         <div>
-          <button fab style="position:relative" [navPush]="contractPage">
+          <button fab style="position:relative" [navPush]="contractListPage">
             <ion-icon name="ios-appstore"></ion-icon>
           </button>
           <h5>销售管理</h5>
+          <ion-buttons end >
+            <button ion-button round color="light" small [navPush]="contractPage">
+              <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
+            </button>
+          </ion-buttons>
         </div>
       </ion-col>
 
@@ -25,6 +30,11 @@
               <ion-icon name="ios-basket"></ion-icon>
             </button>
             <h5>采购管理</h5>
+            <ion-buttons end >
+              <button ion-button round color="light" small [navPush]="orderPage">
+                <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
+              </button>
+            </ion-buttons>
           </div>
       </ion-col>
     </ion-row>
@@ -36,6 +46,11 @@
             <ion-icon name="ios-archive"></ion-icon>
           </button>
           <h5>商品管理</h5>
+          <ion-buttons end >
+            <button ion-button round color="light" small [navPush]="orderPage">
+              <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
+            </button>
+          </ion-buttons>
         </div>
       </ion-col>
 
@@ -45,6 +60,11 @@
             <ion-icon name="logo-bitcoin"></ion-icon>
           </button>
           <h5>收款付款</h5>
+          <ion-buttons end >
+            <button ion-button round color="light" small [navPush]="orderPage">
+              <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
+            </button>
+          </ion-buttons>
         </div>
       </ion-col>
     </ion-row>
@@ -56,6 +76,11 @@
             <ion-icon name="calendar"></ion-icon>
           </button>
           <h5>日常报销</h5>
+          <ion-buttons end >
+            <button ion-button round color="light" small [navPush]="expensePage">
+              <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
+            </button>
+          </ion-buttons>
         </div>
       </ion-col>
 
@@ -65,6 +90,11 @@
             <ion-icon name="md-settings"></ion-icon>
           </button>
           <h5>系统设置</h5>
+          <ion-buttons end >
+            <button ion-button round color="light" small [navPush]="expensePage">
+              <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
+            </button>
+          </ion-buttons>
         </div>
       </ion-col>
     </ion-row>
