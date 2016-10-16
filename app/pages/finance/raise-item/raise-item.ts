@@ -8,7 +8,7 @@ import { NavController } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/raise-item/raise-item.html',
+  templateUrl: 'build/pages/finance/raise-item/raise-item.html',
 })
 export class RaiseItemPage {
 
