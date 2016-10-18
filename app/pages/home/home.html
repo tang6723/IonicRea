@@ -36,7 +36,7 @@
 
       <ion-col>
           <div>
-            <button fab style="position:relative" [navPush]="orderPage">
+            <button fab style="position:relative" [navPush]="orderListPage">
               <ion-icon name="ios-basket"></ion-icon>
             </button>
             <h5>采购管理</h5>
@@ -58,7 +58,7 @@
           </button>
           <h5>商品管理</h5>
           <ion-buttons end >
-            <button ion-button clear danger small [navPush]="orderPage">
+            <button ion-button clear danger small [navPush]="goodsPage">
               <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
             </button>
           </ion-buttons>
@@ -72,7 +72,7 @@
           </button>
           <h5>收款付款</h5>
           <ion-buttons end >
-            <button ion-button clear danger small [navPush]="orderPage">
+            <button ion-button clear danger small [navPush]="billsPage">
               <ion-icon name="ios-add-circle-outline" color="primary"></ion-icon>
             </button>
           </ion-buttons>
@@ -83,7 +83,7 @@
     <ion-row wrap >
       <ion-col>
         <div>
-          <button fab style="position:relative" [navPush]="expensePage">
+          <button fab style="position:relative" [navPush]="expenseListPage">
             <ion-icon name="calendar"></ion-icon>
           </button>
           <h5>日常报销</h5>

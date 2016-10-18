@@ -4,9 +4,17 @@ import { NavController } from 'ionic-angular';
 import {ContractPage} from '../sales/contract/contract';
 import {ContractListPage} from '../sales/contract-list/contract-list';
 import {OrderPage} from '../purchase/order/order';
+import {OrderListPage} from '../purchase/order-list/order-list';
+
 import {GoodsListPage} from '../setting/goods-list/goods-list';
+import {GoodsPage} from '../setting/goods/goods'
 import {BillsListPage} from '../finance/bills-list/bills-list';
+import {BillsPage} from '../finance/bills/bills'
+
 import {ExpensePage} from '../finance/expense/expense';
+import {ExpenseListPage} from '../finance/expense-list/expense-list'
+
+
 import {SettinghomePage} from '../setting/settinghome/settinghome';
 
 declare var hprose;
@@ -20,9 +28,17 @@ export class HomePage {
   contractPage=ContractPage;
   contractListPage=ContractListPage;
   orderPage=OrderPage;
+  orderListPage=OrderListPage;
+
   goodsListPage=GoodsListPage;
+  goodsPage=GoodsPage;
   billsListPage=BillsListPage;
+  billsPage=BillsPage;
+
+  expenseListPage=ExpenseListPage;
   expensePage=ExpensePage;
+
+  //设置放到上面去了
   settinghomePage=SettinghomePage;
 
   time: Date;
